@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Reddit Unit Converter
-// @version      0.2
+// @version      0.3
 // @description  Converts lbs to kgs
 // @author       Mario O.M.
 // @namespace    https://github.com/marioortizmanero/RedditLbsToKgsConverter
@@ -24,7 +24,7 @@
     const lbsToKgsDivision = 2.205;
     const commentClassName = "md";
     const titleClassName = "title";
-    const reverseConverter = false;
+    const reverseConverter = true;
     const round = false;
 
     const lbsToKgRegex = /\d*\s?(lbs|pounds)/g;
@@ -42,7 +42,7 @@
 
     function kgToLbs(match, p1, p2, string) {
         p1 = "lbs";
-        p2 = p2*lbsToKgsDivision;
+        p2 = round ? Math.round(p2*lbsToKgsDivision*100)/100 : Math.round(p2*lbsToKgsDivision);
         return [p2, p1].join("");
     }
 
