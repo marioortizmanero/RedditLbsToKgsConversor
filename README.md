@@ -9,6 +9,8 @@ A userscript to automatically convert **lbs to kg** or vice versa, specifically 
 
 * **Limiting the script to specific subs:** Modify the `match` tag at the top to something like `*://*.reddit.com/r/Brogress/*` to only use it on your preferred subreddits. Just keep adding match tags for every subreddit you want to use it on.
 
+* **Automatic updating for RES scrolling:** Units won't be automatically converted when auto-scrolling with RES unless `updateForRES` is activated. This is disabled by default as it consumes more resources and it can cause errors with other extensions like Imagus.
+
 ## Downloading the script
 The direct download link is here:
 
