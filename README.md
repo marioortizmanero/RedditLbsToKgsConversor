@@ -1,10 +1,10 @@
-# Reddit Lbs To Kgs Conversor
+# Reddit Lbs To Kgs Converter
 A userscript to automatically convert lbs to kgs, specifically made for Reddit. It currently replaces with a regular expression any matches with a number followed by `lbs` or `pounds` into a converted number followed by a space and `kg`. The user can modify the const `round` to true to round the results with 2 digits.
 
 ## Downloading
 The direct download link is here:
 
-* [GreasyFork](https://greasyfork.org/en/scripts/378592-reddit-unit-conversor)
+* [GreasyFork](https://greasyfork.org/en/scripts/378593-reddit-unit-converter)
 
 **Chrome users**: you'll need a script manager extension like [TamperMonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) (the one I'm currently using) or [GreaseMonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/). Then go to the download link above and click on 'Install X.X'. Finally, click on 'install' in the new window that will open.
 
