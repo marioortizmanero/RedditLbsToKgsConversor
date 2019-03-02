@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Reddit Unit Converter
-// @version      0.4
+// @version      0.4.1
 // @description  Converts lbs to kgs
 // @author       Mario O.M.
 // @namespace    https://github.com/marioortizmanero/RedditLbsToKgsConverter
@@ -17,7 +17,7 @@
      * Change 'round' below to 'true' if you prefer a double decimal result like '25.83'
      * instead of '26'.
      *
-     * Change 'reverse' to 'true' if you want to convert from kgs to lbs instead.
+     * Change 'reverseConverter' to 'true' if you want to convert from kgs to lbs instead.
      *
     */
     'use strict';
