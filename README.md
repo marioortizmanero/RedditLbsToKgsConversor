@@ -1,5 +1,5 @@
-# Reddit Lbs To Kgs Converter
-A userscript to automatically convert lbs to kgs, specifically made for Reddit. It currently replaces with a regular expression any matches with a number followed by `lbs` or `pounds` into a converted number followed by a space and `kg`. The user can modify the const `round` to true to round the results with 2 digits.
+# Reddit Unit Converter
+A userscript to automatically convert **lbs to kgs**, specifically made for Reddit. It currently replaces with a regular expression any matches with a number followed by `lbs` or `pounds` into a converted number followed by a space and `kg`. The user can modify the const `round` to true to round the results with 2 digits.
 
 ## Downloading
 The direct download link is here:
