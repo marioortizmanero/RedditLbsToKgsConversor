@@ -19,10 +19,14 @@
    *
    * Change 'reverseConverter' to 'true' if you want to convert from kgs to lbs instead.
    *
+   * Change 'updateForRES' to 'true' if you want the auto-scroll feature from RES to work.
+   * (titles won't get updated in RES with the automatic page loads). This feature is disabled
+   * by default because it consumes resources and has issues with other extensions like Imagus.
   */
   'use strict';
   const reverseConverter = false;
   const round = false;
+  const updateForRES = false;
 
   const lbsToKgRegex = /(\d*\.?\d+)\s?(lbs?|pounds?)/gi;
   const kgToLbsRegex = /(\d*\.?\d+)\s?(kgs?|kilograms?)/gi;
@@ -62,16 +66,17 @@
   }
 
   convertUnits();
-
-  // Updater for RES
-  var updater = function () {
-    if (!updater.timer) {
-      updater.timer = window.setTimeout(function () {
-          convertUnits();
-          updater.timer = false;
-        }, 500);
-      }
-  };
-  new MutationObserver(updater)
-    .observe(document.body, { subtree: true, attributes: true });
+  if (updateForRES) {
+    // Updater for RES
+    var updater = function () {
+      if (!updater.timer) {
+        updater.timer = window.setTimeout(function () {
+            convertUnits();
+            updater.timer = false;
+          }, 500);
+        }
+      };
+      new MutationObserver(updater)
+      .observe(document.getElementById("siteTable"), { subtree: true, attributes: true, characterData:true });
+  }
 })();
