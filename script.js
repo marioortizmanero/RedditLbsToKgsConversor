@@ -10,8 +10,8 @@
 
 (function() {
     /*
-     * You can change the matches below to something like '*://*.reddit.com/Brogress/*' to
-     * only use it on your preferred subreddits. Just keep adding match tags for every
+     * You can change the match tag at the top to something like '*://*.reddit.com/r/Brogress/*' to
+     * only use it on your preferred subreddits. Just keep adding new match tags for every
      * subreddit you want to use it on.
      *
      * Change 'round' below to 'true' if you prefer a double decimal result like '25.83'
