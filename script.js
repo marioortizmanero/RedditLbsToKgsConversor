@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Reddit Unit Converter
-// @version      0.1
+// @version      0.2
 // @description  Converts lbs to kgs
 // @author       Mario O.M.
 // @namespace    https://github.com/marioortizmanero/RedditLbsToKgsConverter
