@@ -73,5 +73,5 @@
       }
   };
   new MutationObserver(updater)
-    .observe(document.body, { subtree: true, attributes: true, childList: true });
+    .observe(document.body, { subtree: true, attributes: true });
 })();
