@@ -21,29 +21,27 @@
      *
     */
     'use strict';
-    const lbsToKgsDivision = 2.205;
-    const commentClassName = "md";
-    const titleClassName = "title";
-    const reverseConverter = true;
+    const reverseConverter = false;
     const round = false;
 
-    const lbsToKgRegex = /\d*\s?(lbs|pounds)/g;
-    const kgToLbsRegex = /\d*\s?(kg|kgs|kilograms)/g;
+    const lbsToKgRegex = /(\d*)\s?(lbs|pounds)/g;
+    const kgToLbsRegex = /(\d*)\s?(kg|kgs|kilograms)/g;
+    const lbsToKgsDivision = 2.205;
 
-    var comments = document.getElementsByClassName(commentClassName);
-    var titles = document.getElementsByClassName(titleClassName);
+    var comments = document.querySelectorAll("p");
+    var titles = document.querySelectorAll("h2");
 
     // Modifies the numbers and units
-    function lbsToKg(match, p1, p2, string) {
-        p1 = "kg";
-        p2 = round ? Math.round(p2/lbsToKgsDivision*100)/100 : Math.round(p2/lbsToKgsDivision);
-        return [p2, p1].join("");
+    function lbsToKg(match,p1,p2) {
+        p2 = "kg";
+        p1 = round ? Math.round(p1/lbsToKgsDivision*100)/100 : Math.round(p1/lbsToKgsDivision);
+        return [p1,p2].join("");
     }
 
-    function kgToLbs(match, p1, p2, string) {
-        p1 = "lbs";
-        p2 = round ? Math.round(p2*lbsToKgsDivision*100)/100 : Math.round(p2*lbsToKgsDivision);
-        return [p2, p1].join("");
+    function kgToLbs(match,p1,p2) {
+        p2 = "lbs";
+        p1 = round ? Math.round(p1*lbsToKgsDivision*100)/100 : Math.round(p1*lbsToKgsDivision);
+        return [p1,p2].join("");
     }
 
     // Regex expressions:
