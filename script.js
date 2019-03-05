@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Reddit Unit Converter
-// @version      0.5.1
+// @version      0.5.2
 // @description  Converts lbs to kgs
 // @author       Mario O.M.
 // @namespace    https://github.com/marioortizmanero/RedditLbsToKgsConverter
@@ -38,29 +38,29 @@
 
     // Modifies the numbers and units
     function lbsToKg(match,p1,p2) {
-      var unit = "kg";
-      var num = round ? Math.round(p1/lbsToKgsConst*100)/100 : Math.round(p1/lbsToKgsConst);
+      let unit = "kg";
+      let num = round ? Math.round(p1/lbsToKgsConst*100)/100 : Math.round(p1/lbsToKgsConst);
       return [num, unit].join("");
     }
     function kgToLbs(match,p1,p2) {
-      var unit = "lbs";
-      var num = round ? Math.round(p1*lbsToKgsConst*100)/100 : Math.round(p1*lbsToKgsConst);
+      let unit = "lbs";
+      let num = round ? Math.round(p1*lbsToKgsConst*100)/100 : Math.round(p1*lbsToKgsConst);
       return [num, unit].join("");
     }
 
     // Regex expressions:
-    for (var i=0;i<titles.length; i++) {
+    for (let i=0;i<titles.length; i++) {
       if(reverseConverter) {
         titles[i].innerHTML = titles[i].innerHTML.replace(kgToLbsRegex, kgToLbs);
       } else {
         titles[i].innerHTML = titles[i].innerHTML.replace(lbsToKgRegex, lbsToKg);
       }
     }
-    for (var j=0;j<comments.length; j++) {
+    for (let i=0;i<comments.length; i++) {
       if(reverseConverter) {
-        comments[j].innerHTML = comments[j].innerHTML.replace(kgToLbsRegex, kgToLbs);
+        comments[i].innerHTML = comments[i].innerHTML.replace(kgToLbsRegex, kgToLbs);
       } else {
-        comments[j].innerHTML = comments[j].innerHTML.replace(lbsToKgRegex, lbsToKg);
+        comments[i].innerHTML = comments[i].innerHTML.replace(lbsToKgRegex, lbsToKg);
       }
     }
   }
